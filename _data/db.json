@@ -1,0 +1,53 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Fix the footer link please",
+      "body": "Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.",
+      "priority": "low",
+      "user_email": "mosesmusoke@KanzuCode.org"
+    },
+    {
+      "id": "2",
+      "title": "Add in a new stylesheet",
+      "body": "Client-Side Rendering: In CSR, the initial page load typically consists of a minimal HTML shell and JavaScript bundle. The client's browser downloads the JavaScript bundle and renders the page. In this case, hydration is the process of initializing and rendering the React components on the client side. The client-side JavaScript takes control of the page, attaches event listeners, and handles user interactions.",
+      "priority": "medium",
+      "user_email": "muftimenk@KanzuCode.org"
+    },
+    {
+      "id": "3",
+      "title": "Server Side Rendering",
+      "body": "Server-Side Rendering: In SSR, the initial rendering of a web page occurs on the server, and a fully rendered HTML page is sent to the client's browser. This can be beneficial for SEO and initial page load performance. However, once the page is loaded in the browser, React or Next.js needs to hydrate the page. Hydration involves attaching event listeners to interactive elements and making the page interactive. React reuses the server-rendered HTML, attaching JavaScript functionality to it so that it behaves like a single-page application.",
+      "priority": "high",
+      "user_email": "fredvuni@KanzuCode.org"
+    },
+    {
+      "title": "Reinstalling the next js module",
+      "body": "The error \"NextRouter was not mounted\" occurs when you try to use the useRouter hook outside of a component that's part of a Next.js page or routing context. In other words, you can only use useRouter within components that are rendered by Next.js, not in standalone JavaScript files.",
+      "priority": "medium",
+      "email": "mosesMusoke@gmail.com",
+      "id": "ROKYku-"
+    },
+    {
+      "title": "Software Development Kit",
+      "body": "SDK stands for \"Software Development Kit.\" It is a collection of software tools, libraries, documentation, and code samples provided by software developers or companies to assist other developers in creating applications or software for a particular platform, framework, or programming language.",
+      "priority": "low",
+      "email": "mosesMusoke@gmail.com",
+      "id": "WR8T1sy"
+    },
+    {
+      "title": "Managing state",
+      "body": "Components: An SDK typically includes the following components:\n\nLibraries: Pre-written code modules that perform common tasks or interface with the platform.\nDocumentation: Detailed instructions, guides, and reference materials to help developers understand and use the SDK.\nSample Code: Example code snippets or projects that demonstrate how to use the SDK's features.\nDevelopment Tools: Utilities and software tools that aid in development, debugging, and testing.",
+      "priority": "high",
+      "email": "mosesMusoke@gmail.com",
+      "id": "KIbgq1u"
+    },
+    {
+      "title": "yah i think am done here",
+      "body": "If you had global packages installed with Node.js 18, you might want to reinstall them for the 16 version. You can use npm list -g --depth=0 to see the list of your global packages, and then you can reinstall them with npm install -g package-name.\n\nRemember that different projects might require different Node.js versions, so you can switch between them using NVM as needed.",
+      "priority": "medium",
+      "email": "mosesMusoke@gmail.com",
+      "id": "38YBtkW"
+    }
+  ]
+}
