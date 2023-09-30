@@ -1,43 +1,39 @@
-import Link from "next/link"
-import { resolve } from "styled-jsx/css"
+import Link from "next/link";
 
-const getTickets = async() => {
-
-    // Imitate Delay
-    await new Promise(resolve => setTimeout(resolve, 3000))
-
-    const res = await fetch('http://localhost:4000/tickets', {
-      next: {
-        revalidate: 0
+async function getTickets() {
+  // imitate delay
+  await new Promise(resolve => setTimeout(resolve, 3000))
+  
+  const res = await fetch('http://localhost:4000/tickets', {
+    headers: {
+      'next': {
+        revalidate: 0 // use 0 to opt out of using cache
       }
-    })
+    }
+  })
 
-    return res.json()
+  return res.json()
 }
 
-const TicketList = async() => {
-
-  const TicketsData = await getTickets()
+export default async function TicketList() {
+  const tickets = await getTickets()
 
   return (
     <>
-      {TicketsData.map(ticket => (
+      {tickets.map((ticket) => (
         <div key={ticket.id} className="card my-5">
-            <Link href={'/tickets/' + ticket.id}>
-              <h2>{ticket.title}</h2>
-              <p>{ticket.body.slice(0, 200)}...</p>
-              <h3 className={`pill ${ticket.priority}`}>
-                  {ticket.priority} priority
-              </h3>
-            </Link>
+          <Link href={`/tickets/${ticket.id}`}>
+            <h3>{ticket.title}</h3>
+            <p>{ticket.body.slice(0, 200)}...</p>
+            <div className={`pill ${ticket.priority}`}>
+              {ticket.priority} priority
+            </div>
+          </Link>
         </div>
       ))}
-
-      {/* {TicketsData.length() === 0 && (
-        <p className="text-center">There are no open Tickets available!!!</p>
-      )} */}
+      {tickets.length === 0 && (
+        <p className="text-center">There are no open tickets available</p>
+      )}
     </>
   )
 }
-
-export default TicketList
